@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+#inputs, #outputs {
+  background: #e9ecef;
+  padding: 20px;
+}
+
+h1, p {
+  text-align: center;
+}
