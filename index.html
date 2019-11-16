@@ -18,74 +18,78 @@
             <h1 class="display-4">Title</h1>
             <p class="lead">Subtitle</p>
           </div>
-        </div>
+        </div><!--end of jumbotron-->
       </div> <!--end of row one column-->
     </div> <!--end of row one-->
 
     <div class='row'> <!--start of row two-->
-      <div class='col-5'> <!--start of row two column one-->
-        <form>
-          <div class='form-group row'>
-            <label for='type' class='col-sm-3 col-form-label'>Type</label>
-            <div class='form-check form-check-inline' id='type'>
-              <input class="form-check-input" type="checkbox" value="" id="movies">
-              <label class="form-check-label" for="movies">
-                Movies
-              </label>
-            </div><!--end of form-check div-->
-  
-            <div class='form-check form-check-inline' id='type'>
-              <input class="form-check-input" type="checkbox" value="" id="tvshows">
-              <label class="form-check-label" for="tvshows">
-                TV Shows
-              </label>
-            </div><!--end of form-check div-->
-          </div><!--end of form-group row one-->
-         
-          <div class='form-group row'>
-            <label for="genre" class="col-sm-3 col-form-label">Genre</label>
-            <div class="col-sm-9">
-              <select class="form-control" id="genre">
-                <option>Comedy</option>
-                <option>Documentary</option>
-                <option>Drama</option>
-                <option>Horror</option>
-                <option>Romance</option>
-              </select>
-            </div> <!--end of form group input column-->
-          </div><!--end of form-group row two-->
+      <div class='col-6'> <!--start of row two column one-->
+        <div class='container' id='inputs'>
+          <form>
+            <div class='form-group row'>
+              <label for='type' class='col-sm-3 col-form-label'>Type</label>
+              <div class='form-check form-check-inline' id='type'>
+                <input class="form-check-input" type="checkbox" value="" id="movies">
+                <label class="form-check-label" for="movies">
+                  Movies
+                </label>
+              </div><!--end of form-check div-->
+    
+              <div class='form-check form-check-inline' id='type'>
+                <input class="form-check-input" type="checkbox" value="" id="tvshows">
+                <label class="form-check-label" for="tvshows">
+                  TV Shows
+                </label>
+              </div><!--end of form-check div-->
+            </div><!--end of form-group row one-->
+          
+            <div class='form-group row'>
+              <label for="genre" class="col-sm-3 col-form-label">Genre</label>
+              <div class="col-sm-9">
+                <select class="form-control" id="genre">
+                  <option>Comedy</option>
+                  <option>Documentary</option>
+                  <option>Drama</option>
+                  <option>Horror</option>
+                  <option>Romance</option>
+                </select>
+              </div> <!--end of form group input column-->
+            </div><!--end of form-group row two-->
 
-          <div class='form-group row'>
-            <label for="runtime" class="col-sm-3 col-form-label">Run Time</label>
-            <div class="col-sm-9">
-              <select class="form-control" id="runtime">
-                <option>0-15 Minutes</option>
-                <option>16-30 Minutes</option>
-                <option>31-45 Minutes</option>
-                <option>46-60 Minutes</option>
-                <option>61-75 Minutes</option>
-              </select>
-            </div> <!--end of form group input column-->
-          </div><!--end of form-group row three-->
+            <div class='form-group row'>
+              <label for="runtime" class="col-sm-3 col-form-label">Run Time</label>
+              <div class="col-sm-9">
+                <select class="form-control" id="runtime">
+                  <option>0-15 Minutes</option>
+                  <option>16-30 Minutes</option>
+                  <option>31-45 Minutes</option>
+                  <option>46-60 Minutes</option>
+                  <option>61-75 Minutes</option>
+                </select>
+              </div> <!--end of form group input column-->
+            </div><!--end of form-group row three-->
 
-          <div class='form-group row'>
-            <label for="sources" class="col-sm-3 col-form-label">Sources</label>
-            <div class="col-sm-9">
-              <select class="form-control" id="sources">
-                <option>Netflix</option>
-                <option>HULU</option>
-                <option>Prime Video</option>
-                <option>HBO</option>
-              </select>
-            </div> <!--end of form group input column-->
-          </div><!--end of form-group row four-->
+            <div class='form-group row'>
+              <label for="sources" class="col-sm-3 col-form-label">Sources</label>
+              <div class="col-sm-9">
+                <select class="form-control" id="sources">
+                  <option>Netflix</option>
+                  <option>HULU</option>
+                  <option>Prime Video</option>
+                  <option>HBO</option>
+                </select>
+              </div> <!--end of form group input column-->
+            </div><!--end of form-group row four-->
 
-          <button type="submit" class="btn btn-info">Give me a recommendation!</button>
-        </form>
+            <button type="submit" class="btn btn-info">Give me a recommendation!</button>
+          </form>
+        </div><!--end of form container-->
       </div> <!--end of row two column one-->
 
-      <div class='col'> <!--start of row two column two-->
+      <div class='col-6'> <!--start of row two column two-->
+        <div class='container' id='outputs'>
 
+        </div>
       </div> <!--end of row two column two-->
     </div> <!--end of row two-->
   </div><!--end of container-->
