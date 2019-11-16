@@ -5,10 +5,11 @@ var type = "movie" //or tv
 var genre= "genre"//name or id of genre
 var runtime=""; //15 minute increments
 var sources=""; //netflix or similar. uses other api
-var apiKey = "?api_key=92f5c8ff853ffea4d1fed070c2f2d729"
+var apiKey = "92f5c8ff853ffea4d1fed070c2f2d729"
+var guidebox = "58812660af2896e3f7dea2cddda186e473191fba"
 
-var queryURL = `${qURL}/${type}/${genre}/list${apiKey}`
-console.log(queryURL)
+// var queryURL = `${qURL}/${type}/${genre}/list?api_key=${apiKey}`
+// console.log(queryURL);
 //https://api.themoviedb.org/3/movie/550?api_key=92f5c8ff853ffea4d1fed070c2f2d729
 //var findGenre = "https://api.themoviedb.org/3/genre/movie/list"
 //https://api.themoviedb.org/3/genre/movie/list?api_key=92f5c8ff853ffea4d1fed070c2f2d729&language=en-US
@@ -24,17 +25,43 @@ console.log(queryURL)
 //sources will have to do with output and will check if available
 
 //if not available do it again and find a new option
+$(".form-check-input").on("click", function(event){
+  type = $(this).val();
+  console.log(type);
+  $(".form-check-input").attr("disabled", "disabled");
+
+  // if(type == "movie")
 
 
-//Ajax
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response){
+});
+
+$("#submit").on("click", function(event){
+  event.preventDefault();
+  console.log("this works")
+  genre = $("#genre").val().trim();
+  console.log(genre);
+  // runtime = $("#runtime").val().trim()
+  // console.log(runtime)
+  sources = $("#sources").val().trim();
+  var queryURL = `https://api.themoviedb.org/3/discover/${type}?with_genres=${genre}&api_key=${apiKey}&language=en-US&page=1`
+ 
+  console.log(queryURL);
+  //Ajax
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response){
 
 
 
-})
+  });
+});
+
+// TV
+//https://api.themoviedb.org/3/search/tv?api_key=<<api_key>>&language=en-US&page=1
+// Movies
+//https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
+//https://api.themoviedb.org/3/search/keyword?api_key=<<api_key>>&page=1
 
 //unless other options become known this is the current plan
 // {
