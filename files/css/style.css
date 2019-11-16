@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'SfHollywoodHills-aPxE' ;
+  src: url(../fonts/shyfoundry_sf-hollywood-hills/SfHollywoodHills-aPxE.ttf) format('truetype')
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,14 +12,28 @@ body {
 }
 
 #inputs, #outputs {
-  background: #e9ecef;
   padding: 20px;
+  background: #e9ecef;
 }
 
 h1, p {
   text-align: center;
+  font-family: 'SfHollywoodHills-aPxE';
 }
 
 .jumbotron {
   margin-top: 30px;
+}
+
+form {
+  font-family: 'SfHollywoodHills-aPxE';
+}
+
+select {
+  font-family: sans-serif;
+}
+
+.btn {
+  font-size: 24px;
+  background-color: #117585;
 }
