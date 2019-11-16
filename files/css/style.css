@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-
+body {
+  background: url(../images/congruent_outline.png);
+}
 
 #inputs, #outputs {
   background: #e9ecef;
@@ -11,4 +13,8 @@
 
 h1, p {
   text-align: center;
+}
+
+.jumbotron {
+  margin-top: 30px;
 }

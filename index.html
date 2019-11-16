@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='files/css/reset.css'>
+  <link rel="stylesheet" href="files/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel='stylesheet' href='files/css/style.css'>
+  <link rel="stylesheet" href="files/css/style.css">
   <title>Super Awesome Project 1</title>
 </head>
 <body>
-  <div class='container'>
-    <div class='row'> <!--start of row one-->
-      <div class='col'> <!--start of row one column-->
+  <div class="container">
+    <div class="row"> <!--start of row one-->
+      <div class="col"> <!--start of row one column-->
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
             <h1 class="display-4">Title</h1>
@@ -22,20 +22,20 @@
       </div> <!--end of row one column-->
     </div> <!--end of row one-->
 
-    <div class='row'> <!--start of row two-->
-      <div class='col-6'> <!--start of row two column one-->
-        <div class='container' id='inputs'>
+    <div class="row"> <!--start of row two-->
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> <!--start of row two column one-->
+        <div class="container" id="inputs">
           <form>
-            <div class='form-group row'>
-              <label for='type' class='col-sm-3 col-form-label'>Type</label>
-              <div class='form-check form-check-inline' id='type'>
-                <input class="form-check-input" type="checkbox" value="" id="movies" value='movies'>
+            <div class="form-group row">
+              <label for="type" class="col-sm-3 col-form-label">Type</label>
+              <div class="form-check form-check-inline" id="type">
+                <input class="form-check-input" type="checkbox" value="" id="movies" value="movies">
                 <label class="form-check-label" for="movies">
                   Movies
                 </label>
               </div><!--end of form-check div-->
     
-              <div class='form-check form-check-inline' id='type'>
+              <div class="form-check form-check-inline" id="type">
                 <input class="form-check-input" type="checkbox" value="" id="tvshows" value="tv">
                 <label class="form-check-label" for="tvshows">
                   TV Shows
@@ -43,20 +43,34 @@
               </div><!--end of form-check div-->
             </div><!--end of form-group row one-->
           
-            <div class='form-group row'>
+            <div class="form-group row">
               <label for="genre" class="col-sm-3 col-form-label">Genre</label>
               <div class="col-sm-9">
                 <select class="form-control" id="genre">
-                  <option>Comedy</option>
-                  <option>Documentary</option>
-                  <option>Drama</option>
-                  <option>Horror</option>
-                  <option>Romance</option>
+                  <option id='28'>Action</option>
+                  <option id='12'>Adventure </option>
+                  <option id='16'>Animation </option>
+                  <option id='35'>Comedy</option>
+                  <option id='80'>Crime</option>
+                  <option id='99'>Documentary</option>
+                  <option id='18'>Drama</option>
+                  <option id='10751'>Family </option>
+                  <option id='14'>Fantasy</option>
+                  <option id='36'>History</option>
+                  <option id='27'>Horror</option>
+                  <option id='10402'>Music</option>
+                  <option id='9648'>Mystery</option>
+                  <option id='10749'>Romance</option>
+                  <option id='878'>Science Fiction</option>
+                  <option id='10720'>TV Movie</option>
+                  <option id='53'>Thriller</option>
+                  <option id='10752'>War</option>
+                  <option id='37'>Wester </option>
                 </select>
               </div> <!--end of form group input column-->
             </div><!--end of form-group row two-->
 
-            <div class='form-group row'>
+            <div class="form-group row">
               <label for="runtime" class="col-sm-3 col-form-label">Run Time</label>
               <div class="col-sm-9">
                 <select class="form-control" id="runtime">
@@ -69,7 +83,7 @@
               </div> <!--end of form group input column-->
             </div><!--end of form-group row three-->
 
-            <div class='form-group row'>
+            <div class="form-group row">
               <label for="sources" class="col-sm-3 col-form-label">Sources</label>
               <div class="col-sm-9">
                 <select class="form-control" id="sources">
@@ -81,13 +95,13 @@
               </div> <!--end of form group input column-->
             </div><!--end of form-group row four-->
 
-            <button type="submit" class="btn btn-info">Give me a recommendation!</button>
+            <button type="submit" class="btn btn-info btn-block py-2">Give me a recommendation!</button>
           </form>
         </div><!--end of form container-->
       </div> <!--end of row two column one-->
 
-      <div class='col-6'> <!--start of row two column two-->
-        <div class='container' id='outputs'>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> <!--start of row two column two-->
+        <div class="container" id="outputs">
 
         </div>
       </div> <!--end of row two column two-->
@@ -110,7 +124,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!--Our JS-->
-  <script src='files/js/app.js'></script>
+  <script src="files/js/app.js"></script>
 
   <!--Bootstrap JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
