@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--CSS reset-->
   <link rel="stylesheet" href="files/css/reset.css">
+  <!--Bootstrap CDN-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Firebase Auth Stylesheet-->
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.3.0/firebase-ui-auth__en.css" />
+  <!--link to app stylesheet-->
   <link rel="stylesheet" href="files/css/style.css">
   <title>Super Awesome Project 1</title>
 </head>
@@ -81,11 +86,12 @@
               <label for="runtime" class="form-group col-sm-3 col-form-label">Run Time</label>
               <div class="form-group col-sm-9">
                 <select class="form-control" id="runtime">
-                  <option>0-15 Minutes</option>
-                  <option>16-30 Minutes</option>
-                  <option>31-45 Minutes</option>
-                  <option>46-60 Minutes</option>
-                  <option>61-75 Minutes</option>
+                  <option>0-30 Minutes</option>
+                  <option>31-60 Minutes</option>
+                  <option>61-90 Minutes</option>
+                  <option>91-120 Minutes</option>
+                  <option>121-150 Minutes</option>
+                  <option>151-180 Minutes</option>
                 </select>
               </div> <!--end of form group input column-->
             </div><!--end of form-group row three-->
@@ -114,13 +120,10 @@
       </div> <!--end of row two column two-->
     </div> <!--end of row two-->
   </div><!--end of container-->
-
-
-
-
   
-  <!--Firebase-->
-
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/7.4.0/firebase-ui-auth__en.js"></script>
 
   <!--jQuery-->
   <script
