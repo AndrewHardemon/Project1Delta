@@ -16,6 +16,13 @@ body {
   background: #e9ecef;
 }
 
+#outputs {
+  text-align: center;
+  font-family: 'SfHollywoodHills-aPxE';
+  font-size: 24px;
+  height: 100%;
+}
+
 h1, p {
   text-align: center;
   font-family: 'SfHollywoodHills-aPxE';
@@ -27,6 +34,7 @@ h1, p {
 
 form {
   font-family: 'SfHollywoodHills-aPxE';
+  font-size: 20px;
 }
 
 select {
@@ -35,5 +43,6 @@ select {
 
 .btn {
   font-size: 24px;
-  background-color: #117585;
+  background-color: #8e44ad;
+  border-color: #8e44ad;
 }
