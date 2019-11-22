@@ -208,6 +208,7 @@ $("#submit").on("click", function(event){
         //Output the Artwork
         var poster = $("<img>");
         poster.attr("src", artwork);
+        poster.attr("class", "rounded float-left");
         $("#outputs").append(poster);
 
         //Output the Description
