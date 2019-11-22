@@ -46,3 +46,11 @@ select {
   background-color: #8e44ad;
   border-color: #8e44ad;
 }
+.conf-canvas{
+  position: absolute;
+  z-index: -1;
+}
+.top-container{
+  display: flex;
+  flex-direction: column;
+}
