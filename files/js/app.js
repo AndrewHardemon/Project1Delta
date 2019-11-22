@@ -9,6 +9,8 @@ var guidebox = "58812660af2896e3f7dea2cddda186e473191fba"
 var tries = 0;
 var finalResult = "";
 var descArray = [];
+var srcArray = [];
+
 
 //Click Event
 $(".form-check-input").on("click", function(event){
@@ -41,6 +43,34 @@ $("#submit").on("click", function(event){
   var r4 = runtime.substring(r1+1,r2);
   console.log(r3);
   console.log(r4);
+  //Gets source variable
+  source = $("#sources").val().trim();
+  console.log(source);
+  //Get id instead of name
+  if(source == "Netflix"){
+    console.log("netflix works")
+    //Push name
+    srcArray.push(source);
+    //Push id
+    source = 12;
+    srcArray.push(source);
+  } else if(source == "Hulu"){
+    console.log("hulu works")
+    srcArray.push(source);
+    source = 10;
+    srcArray.push(source);
+  } else if(source == "Prime Video"){
+    console.log("prime works")
+    srcArray.push(source);
+    source = 13;
+    srcArray.push(source);
+  } else if(source == "HBO"){
+    console.log("hbo works")
+    srcArray.push(source);
+    source = 93;
+    srcArray.push(source);
+  }
+  console.log(srcArray)
 
   //Exclude adult content
   var adult = "&include_adult=false";
@@ -150,7 +180,9 @@ $("#submit").on("click", function(event){
         queryURL2 = `http://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=show&field=title&query=${outputName}`
       }
       console.log(queryURL2)
-      console.log(`http://api-public.guidebox.com/v2/sources?api_key=${guidebox}&filter=movie&type=movie&field=title&query=${outputName}`)
+
+      //Getting the source
+      console.log(`http://api-public.guidebox.com/v2/sources?api_key=${guidebox}&filter=movie&query=${outputName}`)
 
       //Guidebox Ajax
       $.ajax({
@@ -166,6 +198,7 @@ $("#submit").on("click", function(event){
           tries++
           console.log(`Its been ${tries} tries`)
           descArray = [];
+          srcArray = [];
           totalAjax();
         } else if (res.total_results > 1){
           var total2 = Math.floor((Math.random() * res.total_results));
@@ -175,6 +208,7 @@ $("#submit").on("click", function(event){
           finalResult = res.results[total2].title;
           console.log(finalResult)
 
+          //Artwork var for TV and Movie
           var artworkTV = res.results[total2].poster_240x342
           var artworkMovie = res.results[total2].artwork_304x171
           // var artworkTV = res.results[total2].poster_120x171
@@ -213,9 +247,22 @@ $("#submit").on("click", function(event){
 
         //Output the Description
         var desc = $("<p>");
-        desc.append(descArray[0])
+        desc.append(descArray[0]);
         console.log(descArray[0]);
         $("#outputs").append(desc);
+
+        //Output if available on source
+        var sorc = $("<p>");
+        sorc.append(srcArray[0]);
+        console.log(srcArray[0]);
+        // $("#outputs").append
+
+        // Confetti
+        var confettiSettings = { "target": 'my-canvas', 'rotate': true,"max":"80","size":"1","animate":true,"props":["circle","square","triangle","line"],"colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],"clock":"25","rotate":false,"width":"958","height":"923"};
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
+        setTimeout(function(){confetti.clear()}, 5000);
 
       });
     });
@@ -223,16 +270,3 @@ $("#submit").on("click", function(event){
   } //end of function
   totalAjax();
 })
-
-//random number between 1 and total results
-// var total2 = Math.floor((Math.random() * res.total_results)+1);
-// console.log(total2);
-
-// //get random title
-// var newName = res.results[total2].title;
-// //Replace spaces with -
-// newName = newName.replace(/\ /g, '-');
-// console.log(newName);
-// queryURL2 = `http://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=show&field=title&query=${newName}`
-
-// //last Ajax
