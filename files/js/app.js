@@ -250,6 +250,7 @@ $("#submit").on("click", function(event){
         desc.append(descArray[0]);
         console.log(descArray[0]);
         $("#outputs").append(desc);
+        descArray = [];
 
         //Output if available on source
         var sorc = $("<p>");
