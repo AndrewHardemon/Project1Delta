@@ -173,16 +173,16 @@ $("#submit").on("click", function(event){
       if(type == "movie"){
         //If Movie
         console.log("this is a movie")
-        queryURL2 = `http://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=movie&field=title&query=${outputName}` 
+        queryURL2 = `https://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=movie&field=title&query=${outputName}` 
       } else { 
         //If Show
         console.log("this is a show")
-        queryURL2 = `http://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=show&field=title&query=${outputName}`
+        queryURL2 = `https://api-public.guidebox.com/v2/search?api_key=${guidebox}&type=show&field=title&query=${outputName}`
       }
       console.log(queryURL2)
 
       //Getting the source
-      console.log(`http://api-public.guidebox.com/v2/sources?api_key=${guidebox}&filter=movie&query=${outputName}`)
+      console.log(`https://api-public.guidebox.com/v2/sources?api_key=${guidebox}&filter=movie&query=${outputName}`)
 
       //Guidebox Ajax
       $.ajax({
