@@ -1,18 +1,31 @@
-# Project1Delta
+# Semi-Random Recommendations
+A group project created by Andrew and Ivanna
 
-https://github.com/AeroAtlas/Project1Delta
+## Description
+Our website helps users find new content to watch or play by randomly suggesting a movie or TV show based on the user’s preferences. 
 
-Project Title: Semi-Random Recommendations
-Team Members: Andrew & Ivanna
-Project Description: Our project will allow users to receive a semi-random movie or TV show recommendation based on genre, run time, and availability
-Sketch of the Design: https://www.figma.com/file/ipxckOkqlRd79nrjmc9mZk/Untitled?node-id=0%3A1
-APIs:
-•    OMDB
-•    Guidebox
-Rough Breakdown of Tasks:
-•    Decide on initial features
-•    Design basic UI in Figma
-•    Understand API responses
-•    Pseudocode JS
-•    Write code for UI
-•    Write code for JS functionality
+## Motivation
+The idea came when we realized how often we find ourselves re-watching the same old shows and movies or wanting to watch something new but being unable to decide. 
+
+[See a Sketch of Our Design](https://www.figma.com/file/ipxckOkqlRd79nrjmc9mZk/Untitled?node-id=0%3A1)
+
+## Results
+Our website provides users with semi-random recommendations for movies and TV shows based on selected criteria and data gathered from two APIs: The Open Movie Database(OMDB) and Guidebox. The app searches through OMDB for a recommendation based on type, genre, and run time; and then uses Guidebox to make sure the recommended content is available to stream online.
+
+[See the End Result](https://aeroatlas.github.io/Project1Delta/)
+
+## Team Responsibilities
+Andrew 
+  * Utilized APIs 
+  * Added confetti 
+
+Ivanna
+  * User Interface
+  * Project presentation
+  
+## Improvements
+In the future, we would like our website to: 
+  * Include user authorization so users can create an account and save their recommendation for later.
+  * Allow users to filter content by what is available on the streaming services they subscribe to.
+  * Allow users to filter content by average review to allow them more control over their semi-random recommendation. 
+
